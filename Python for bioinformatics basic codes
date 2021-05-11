@@ -1,0 +1,51 @@
+#searching for specific seq :
+num = 'TATATATATAGGGOODJHGFD'
+print(num.find('TATA')
+#Checking if a seq in num:
+if 'TATAT' in num:
+    print(True)
+else:
+    print(false)
+#or 
+if 'YOIUYFDSDFGH' not in num:
+    print(False)
+# to know seq length:
+print(len(num))
+# to add seq in main seq:
+print('YYYYY' + num)
+#or you can join two seqs togther:
+print('TTTDDAAA' + 'TATATGGGCT')
+# to multiply a specifc seq:
+print('yyy' * 12)
+#to extract data in a seq in order to know what data in a specific position:
+print('TATATA'[0]) #[0] refers to the position of the data we need to extract. you can type the position in different ways such as:
+print('TATATA'[10 // 3]) #divide with integral result (discard remainder)
+#data slicing:getting data in specific position:
+print('MMMMJHREGGGGGGGGGF'[2:10]) #Slicing
+print('MMMMJHREGGGGGGGGGF'[2:-10]) #negative number refers to counting backwards. the last number is [-1]
+print('MMMMJHREGGGGGGGGGF'[0:2:6])
+print('MMMMJHREGGGGGGGGGF'[2:]) # from position 3 to the last position
+print('MMMMJHREGGGGGGGGGF'[:5]) # from 0 to 5
+#functions
+print(len(num))
+print(abs(1223 + 123)) #abs refers to the absolute value
+print(int(2.1)) # check if the number is integer
+print(float(358)) # check if the number is float
+print(bool('')) # it return FALSE . The Python Boolean type is one of Python's built-in data types. It's used to represent the truth value of an expression.
+print(bool(' ')) # if we add a value or even space it returns TRUE
+# working on strings simple practice 
+str_1 = 'AAHDHKOEWGGGHJJWIWCCGGGGGGIRUPTRIEK'
+str_2 = 'EGREITGKEOETGERTRJRET'
+print(str_1.count('G'))
+print(str_2.find('YYY')) #returned none = -1
+print(str_1.startswith(str_2)) #it checks the data and returns TRUE or FAlSE 
+print(str_1.startswith('AAHD'))
+print(str_2.startswith('SSS'))
+print(str_2.endswith('JRET')) #Same as startwith function
+print(str_2.startswith('DL', 4)) # check if it starts with 'DL' At 4 position.
+print(str_2.find('GG'))
+print(str_1.find('GG', 10, 5))
+# this is an important practice here which asks you to Implement a function with signature find_chars(string1, string2) that takes two strings and returns a string that contains only the characters found in string1 and string two in the order that they are found in string1. Implement a version of order N*N and one of order N.
+#Answer:
+str = set(str_2)
+print(''.join([f for f in str_1 if f in str]))
